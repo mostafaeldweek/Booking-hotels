@@ -1,6 +1,5 @@
 <script setup>
 import Headera from "../components/Header.vue";
-import Headera from "../components/Header.vue";
 import SearchComponents from "../components/SearchComponents.vue";
 import CovidComponent from "../components/CovidComponent.vue";
 import EnjoyComponent from "../components/EnjoyComponent.vue";
