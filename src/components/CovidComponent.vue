@@ -17,7 +17,6 @@ import CovidIcon from "./Icons/CovidIcon.vue";
   box-sizing: border-box;
   display: flex;
   gap: 30px;
-  border: solid;
   height: 72px;
   border-radius: 8px;
   background: #fcefca;
@@ -33,7 +32,7 @@ span {
   line-height: 200%; /* 22.4px */
   letter-spacing: 0.32px;
 }
-a{
-    color:#2F80ED
+a {
+  color: #2f80ed;
 }
 </style>

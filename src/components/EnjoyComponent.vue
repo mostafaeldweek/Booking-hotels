@@ -1,34 +1,20 @@
 <template>
   <div>
-    <div
-      style="
-        color: #181818;
-        font-family: SF Pro Display;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      "
-    >
+    <div class="text-600 font-sans text-4xl font-semibold mb-5">
       Enjoy your dream vacation
     </div>
-    <div>
+    <div class="text-gray-800  font-sans text-base font-normal leading-7 mb-2">
       Plan and book our perfect trip with expert advice, travel tips,
       destination information and <br />
       inspiration from us
     </div>
-    <div class="enjoy-gallery">
-      <div
-        class="enjoy-gallery-items"
-        v-for="(item, index) in items"
-        :key="index"
-      >
-        <img :src="item.imgurl" :alt="item.country" />
-        <span>{{ item.country }}</span>
-        <div>{{ item.num }}</div>
+    <div class="flex justify-between gap-10">
+      <div v-for="(item, index) in items" :key="index">
+        <img :src="item.imgurl" :alt="item.country" class="w-96" />
+        <span class="block">{{ item.country }}</span>
+        <div class="block">{{ item.num }}</div>
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 
@@ -39,21 +25,11 @@ import myImage10 from "../assets/home/enjoy/Rectangle 10.png";
 import myImage11 from "../assets/home/enjoy/Rectangle 11.png";
 
 const items = [
-  { imgurl: myImage8, country: "Country1", num: 1 },
-  { imgurl: myImage9, country: "Country1", num: 2 },
-  { imgurl: myImage10, country: "Country1", num: 3 },
-  { imgurl: myImage11, country: "Country1", num: 4 },
+  { imgurl: myImage8, country: "Australia", num: "2246 properties" },
+  { imgurl: myImage9, country: "Japan", num: "1278 properties" },
+  { imgurl: myImage10, country: "New Zealand", num: "480 properties" },
+  { imgurl: myImage11, country: "Greece", num: "320 properties" },
 ];
 </script>
 
-<style scoped>
-.enjoy-gallery {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-.enjoy-gallery-items img {
-  width: 100%;
-  height: 80%;
-}
-</style>
+<style scoped></style>

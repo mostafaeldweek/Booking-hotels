@@ -1,25 +1,16 @@
 <template>
-  <div style="display: grid; gap: 20px">
-    <div
-      style="
-        color: #181818;
-        font-family: SF Pro Display;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      "
-    >
+  <div class="grid gap-5 mb-24">
+    <div class="text-gray-900 font-sans text-4xl font-semibold">
       Popular Hotel
     </div>
-    <div class="enjoy-gallery">
+    <div class="flex justify-between gap-5">
       <div
         class="enjoy-gallery-items"
         v-for="(item, index) in items"
         :key="index"
       >
-        <img :src="item.imgurl" :alt="item.country" />
-        <span>{{ item.country }}</span>
+        <img :src="item.imgurl" :alt="item.country" class="w-full" />
+        <span class="font-bold">{{ item.country }}</span>
         <div>{{ item.num }}</div>
       </div>
     </div>
@@ -34,21 +25,19 @@ import myImage10 from "../assets/home/enjoy/Rectangle 10.png";
 import myImage11 from "../assets/home/enjoy/Rectangle 11.png";
 
 const items = [
-  { imgurl: myImage8, country: "Country1", num: 1 },
-  { imgurl: myImage9, country: "Country1", num: 2 },
-  { imgurl: myImage10, country: "Country1", num: 3 },
-  { imgurl: myImage11, country: "Country1", num: 4 },
+  {
+    imgurl: myImage8,
+    country: "Lakeside Motel Warefront",
+    num: "2246 properties",
+  },
+  { imgurl: myImage9, country: "Recce Graham resort", num: "1278 properties" },
+  { imgurl: myImage10, country: "Fireside Dinners", num: "480 properties" },
+  { imgurl: myImage11, country: "Oculous Inn Stay", num: "320 properties" },
 ];
 </script>
 
 <style scoped>
-.enjoy-gallery {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
 .enjoy-gallery-items img {
-  width: 100%;
-  height: 100%;
+  height: 120%;
 }
 </style>

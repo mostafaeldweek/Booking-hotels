@@ -399,7 +399,7 @@
     border-radius: 34px;
   }
   
-  /* Style for the slider's thumb (the part you drag) */
+
   .slider:before {
     position: absolute;
     content: "";
@@ -415,7 +415,6 @@
     box-shadow: -1px -1px 2px;
   }
   
-  /* Checked state styles */
   input:checked + .slider {
     background-color: #2196f3;
   }
@@ -447,13 +446,10 @@
     border: 1px solid var(--Gray-5, #e0e0e0);
     background: #fff;
   }
-  .main {
-  }
+
   header {
     background: linear-gradient(180deg, #2969bf 0%, #144e9d 100%);
     height: 200px;
-  }
-  nav {
   }
   .custom-header {
     background-color: #ffffff; /* Example background color */
@@ -496,9 +492,6 @@
     grid-template-columns: 25% 75%;
     gap: 30px;
   }
-  .select div:first-child {
-  }
-  .select div:nth-child(2) {
-  }
+
   </style>
   

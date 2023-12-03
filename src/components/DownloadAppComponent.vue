@@ -1,13 +1,28 @@
 <template>
-  <div class="download-container">
-    <img :src="DownnloadImage" class="background-image" />
-    <img :src="HandImage" class="overlay-image" />
-    <div class="text-container">
-      <p>
+  <div class="h-72 overflow-hidden relative rounded-8">
+    <img
+      :src="DownnloadImage"
+      class="w-full h-auto rounded-8 bg-gradient-to-r from-[rgba(0,0,0,0.5)] to-transparent bg-cover bg-no-repeat bg-center before:content-[''] before:w-[1240px] before:h-[553.081px] before:-left-100 before:-top-[295.058%] before:bg-lightgray"
+    />
+    <img
+      :src="HandImage"
+      style="transform: translate(-50%, -50%) rotate(-15deg) scale(0.6)"
+      class="absolute top-2/3 left-3/4 transform -translate-x-1/2 -translate-y-1/2 rotate-[-15deg] scale-60 w-30 h-auto z-1 w-full rounded-8 bg-gradient-to-r from-[rgba(0,0,0,0)] to-transparent bg-cover bg-no-repeat bg-center before:content-[''] before:absolute before:w-[1240px] before:h-[553.081px] before:-left-100 before:-top-[295.058%] before:bg-lightgray"
+    />
+    <div
+      style="top: 15%"
+      class="absolute top-15 left-0 text-left px-5 py-4 flex flex-col gap-4"
+    >
+      <p class="m-0 text-white font-sans font-semibold text-3xl leading-[140%]">
         Download the mobile application for bonus <Br /> coupons and travel
         codes
       </p>
-      <button @click="handleButtonClick">Download Mobile App</button>
+      <button
+        @click="handleButtonClick"
+        class="max-w-[220px] px-4 py-2 bg-blue-500 text-white border-none rounded-lg cursor-pointer flex items-center justify-center"
+      >
+        Download Mobile App
+      </button>
     </div>
   </div>
 </template>
@@ -17,65 +32,4 @@ import DownnloadImage from "../assets/home/enjoy/downloadimage.jpg";
 import HandImage from "../assets/home/enjoy/hand.png";
 </script>
 
-<style scoped>
-.download-container {
-  height: 280px; /* Set the desired height */
-  overflow: hidden;
-  position: relative;
-  border-radius: 8px;
-}
-.download-container img {
-  width: 100%; /* Make the image fill the container width */
-  height: auto; /* Maintain the aspect ratio */
-  border-radius: 8px;
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url(""), lightgray 1240px 553.081px / -100% -295.058% no-repeat;
-}
-.overlay-image {
-  position: absolute;
-  top: 60%;
-  left: 70%;
-  transform: translate(-50%, -50%) rotate(-15deg) scale(0.6);
-  width: 30%; /* Adjust the size of the overlay image */
-  height: auto;
-  z-index: 1;
-}
-.text-container {
-  position: absolute;
-  top: 20%; /* Adjust the distance from the bottom */
-  left: 0px;
-  text-align: left;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.text-container p {
-  margin: 0;
-  color: white;
-  font-size: 16px; /* Adjust the font size */
-  color: #fff;
-  font-family: SF Pro Display;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%; /* 39.2px */
-}
-.text-container button {
-  max-width: 182px;
-  padding: 8px 16px;
-  background-color: #3498db; /* Adjust the background color */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  padding: 12px 18px;
-  justify-content: center;
-  align-items: center;
-}
-</style>
+<style scoped></style>

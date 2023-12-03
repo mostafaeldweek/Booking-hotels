@@ -48,12 +48,6 @@
             Login
           </button>
         </router-link>
-        <!-- <button
-          type="submit"
-          class="w-full py-2 text-white border-none cursor-pointer rounded bg-blue-500 hover:bg-yellow-500"
-        >
-          Register
-        </button> -->
       </form>
       <div class="reg flex justify-center mt-8">
         Already have an account? <a href="" class="text-blue-500">Sign in</a>

@@ -1,62 +1,65 @@
 <template>
-  <div>
+  <div class="all">
     <!-- Display your hotel data here -->
-    <div v-for="hotel in hotels" :key="hotel.property.id">
-      <!-- <h2>{{ hotel.property.priceBreakdown.grossPrice.value }}</h2> -->
-      <!-- Add more details as needed -->
-    </div>
-    <header>
-      <nav style="margin-inline: 100px">
-        <header class="custom-header">
-          <!-- Left Section (2 elements) -->
-          <div class="left-section">
-            <span>
-              <PlaneIcon />
-            </span>
-            <span>Left Element 2</span>
-          </div>
-
-          <!-- Center Section (5 elements) -->
-          <div class="center-section">
-            <span>Home</span>
-            <span>Discover</span>
-            <span>activites</span>
-            <span>About</span>
-            <span>Contact</span>
-          </div>
-
-          <!-- Right Section (2 elements) -->
-          <div class="right-section">
-            <router-link to="/registration">
-              <button
-                class="w-full py-2 text-white border-none cursor-pointer rounded bg-blue-500 hover:bg-yellow-500"
-              >
-                Login
-              </button>
-            </router-link>
-          </div>
-        </header>
-      </nav>
-    </header>
-    <div class="bottom-container">
+    <HeaderComponent style="margin-top: -80px" />
+    <div class="bottom-container" style="margin-inline: 200px">
       <SearchComponents />
     </div>
-    <div class="select">
+    <div class="select" style="margin-inline: 100px; margin-top: 50px">
       <div class="left-side-selection">
         <div class="search-name-box">
-          <p>Search by property name</p>
+          <p
+            class="text-black dark:text-white font-sans text-base font-bold tracking-tighter leading-normal"
+          >
+            Search by property name
+          </p>
           <div class="search-name-input">
-            &copf;;
-            <input type="text" name="" id="" placeholder="eg. Beach westpalm" />
+            <SearchIcon />
+            <input
+              class="w-4/5 border-0 rounded-md pl-2"
+              type="text"
+              name=""
+              id=""
+              placeholder="eg. Beach westpalm"
+            />
           </div>
         </div>
-        <div style="padding: 18px">Filter by</div>
+        <div
+          style="
+            color: var(--Gray-1, #333);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.36px;
+            padding: 18px;
+          "
+        >
+          Filter by
+        </div>
         <div
           class="budget-selection"
-          style="border: solid 1px #e0e0e0; border-radius: 20px"
+          style="
+            border: solid 1px #e0e0e0;
+            border-radius: 10px;
+            padding-bottom: 15px;
+          "
         >
-          <div style="padding-inline: 18px">Your budget per day</div>
-          <div>
+          <div
+            style="
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              padding: 18px;
+              font-size: 18px;
+              font-weight: 700;
+              border-radius: 6px 6px 0px 0px;
+              border: 1px solid var(--Gray-5, #e0e0e0);
+              background: var(--Gray-6, #f2f2f2);
+            "
+          >
+            Your budget per day
+          </div>
+          <div style="display: grid; gap: 10px; padding-top: 15px">
             <div
               style="
                 display: flex;
@@ -66,9 +69,9 @@
             >
               <label>
                 <input type="checkbox" name="subscribe" value="yes" />
-                Subscribe
+                $ 200 - $ 500
               </label>
-              <div>one two</div>
+              <div>200</div>
             </div>
             <div
               style="
@@ -79,9 +82,9 @@
             >
               <label>
                 <input type="checkbox" name="subscribe" value="yes" />
-                Subscribe
+                $ 200 - $ 500
               </label>
-              <div>one two</div>
+              <div>100</div>
             </div>
             <div
               style="
@@ -92,9 +95,9 @@
             >
               <label>
                 <input type="checkbox" name="subscribe" value="yes" />
-                Subscribe
+                $ 500 - $ 1,000
               </label>
-              <div>one two</div>
+              <div>50</div>
             </div>
             <div
               style="
@@ -105,9 +108,9 @@
             >
               <label>
                 <input type="checkbox" name="subscribe" value="yes" />
-                Subscribe
+                $ 1000 - $ 1,500
               </label>
-              <div>one two</div>
+              <div>56</div>
             </div>
             <div
               style="
@@ -118,8 +121,19 @@
             >
               <label>
                 <input type="checkbox" name="subscribe" value="yes" />
-                Subscribe
+                $ 1000 - $ 1,500
               </label>
+              <div>17</div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                padding-inline: 18px;
+                margin-block: 10px;
+              "
+            >
+              <label> Set your own budget </label>
               <label class="switch">
                 <input type="checkbox" />
                 <span class="slider"></span>
@@ -136,14 +150,38 @@
                 type="text"
                 name=""
                 id=""
-                style="width: 100px"
-                placeholder="Max Budget"
+                style="
+                  width: 100px;
+                  padding: 10px;
+                  border-radius: 4px;
+                  border-radius: 4px;
+                  display: flex;
+                  width: 112px;
+                  padding: 11px 12px 12px 12px;
+                  align-items: center;
+                  gap: 10px;
+                  border: 1px solid var(--Gray-5, #e0e0e0);
+                  background: #fff;
+                "
+                placeholder="Min Budget"
               />
               <input
                 type="text"
                 name=""
                 id=""
-                style="width: 100px"
+                style="
+                  width: 100px;
+                  border-radius: 4px;
+                  border: 1px solid var(--Gray-5, #e0e0e0);
+                  background: #fff;
+                  display: flex;
+                  width: 112px;
+                  padding: 11px 12px 12px 12px;
+                  align-items: center;
+                  gap: 10px;
+                  padding: 10px;
+                  border-radius: 4px;
+                "
                 placeholder="Max Budget"
               />
             </div>
@@ -152,26 +190,106 @@
 
         <div
           class="rating"
-          style="border: solid 1px #e0e0e0; border-radius: 20px; padding: 18px"
+          style="
+            border: solid 1px #e0e0e0;
+            border-radius: 10px;
+            margin-top: 20px;
+          "
         >
-          <div>Rating</div>
-          <div>
-            <p>Show only hotels rating</p>
+          <div
+            style="
+              border-radius: 6px 6px 0px 0px;
+              border: 1px solid #e0e0e0;
+              background: #f2f2f2;
+              padding: 18px;
+              font-weight: 700;
+              font-size: 18px;
+            "
+          >
+            Rating
+          </div>
+          <div style="padding: 18px">
+            <p
+              style="
+                color: var(--Gray-2, #4f4f4f);
+                font-family: sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 15px;
+                letter-spacing: 0.28px;
+              "
+            >
+              Show only hotels rating
+            </p>
             <div
               class="stars"
               style="
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
                 border: solid 1px #e0e0e0;
                 border-radius: 10px;
                 padding: 10px;
+                text-align: center;
               "
             >
-              <button>1 &copf;</button>
-              <button>1 &copf;</button>
-              <button>1 &copf;</button>
-              <button>1 &copf;</button>
-              <button>1 &copf;</button>
+              <button
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 3px;
+                  border-radius: 5px;
+                  height: 40px;
+                "
+              >
+                1 <StarIcon />
+              </button>
+              <button
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 3px;
+                  border-radius: 5px;
+                  height: 40px;
+                "
+              >
+                2 <StarIcon />
+              </button>
+              <button
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 3px;
+                  border-radius: 5px;
+                  height: 40px;
+                "
+              >
+                3 <StarIcon />
+              </button>
+              <button
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 3px;
+                  border-radius: 5px;
+                  height: 40px;
+                "
+              >
+                4 <StarIcon />
+              </button>
+              <button
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 3px;
+                  border-radius: 5px;
+                  height: 40px;
+                "
+              >
+                5 <StarIcon />
+              </button>
             </div>
           </div>
         </div>
@@ -181,7 +299,9 @@
           class="results"
           style="display: flex; justify-content: space-between"
         >
-          <p>Melbourne : 2,582 search results found</p>
+          <p class="text-xl font-bold">
+            <!-- {{ sortedHotelsMeta[0].title }} in your search -->
+          </p>
           <div
             style="
               border: 1px solid #efefef;
@@ -189,6 +309,7 @@
               border-radius: 6px;
               padding: 8px 12px;
             "
+            class="mb-5"
           >
             <label for="sortOrder">Choose a sort order:</label>
             <select id="sortOrder" name="sortOrder" v-model="selectedSortOrder">
@@ -200,30 +321,26 @@
                 {{ sort.title }}
               </option>
             </select>
-            <div>{{ selectedSortOrder }}</div>
           </div>
         </div>
 
         <div v-for="hotel in hotels" :key="hotel.property.id">
-          <!-- <h2>{{ hotel.property.priceBreakdown.grossPrice.value }}</h2> -->
-          <!-- Add more details as needed -->
           <div
-            class="hotels-search"
-            style="
-              display: grid;
-              grid-template-columns: 25% 75%;
-              border: solid #efefef 2px;
-              padding: 18px;
-              border-radius: 4px;
-            "
+            class="grid hotels-search p-5 m-3 rounded"
+            style="grid-template-columns: 25% 75%; border: solid #efefef 2px"
           >
-            <img :src="hotel.property.photoUrls" alt="fff" style="width: 60%" />
+            <img
+              class="p-2 h-full rounded-md"
+              :src="hotel.property.photoUrls"
+              alt="fff"
+              style="width: 100%"
+            />
             <div class="all-info-right-box">
-              <div style="display: flex; justify-content: space-between">
+              <div style="justify-content: space-between" class="mb-4 flex">
                 <div>{{ hotel.property.name }}</div>
                 <div>first row statement</div>
               </div>
-              <div style="width: 70%; font-size: 9px; font-weight: 600">
+              <div style="width: 80%; font-size: 14px; font-weight: 600">
                 {{ hotel.accessibilityLabel }}
               </div>
               <div style="display: flex; justify-content: space-between">
@@ -234,7 +351,7 @@
                 class="see-avail-and-price"
                 style="display: flex; justify-content: space-between"
               >
-                <div>
+                <div class="mt-10">
                   <router-link
                     :to="{
                       name: 'productdetails',
@@ -264,16 +381,24 @@
         </div>
       </div>
     </div>
+    <CovidComponent class="mx-28 mr-28 mt-10 mb-10" />
+    <LinksFooter style="padding-left: 100px; margin-right: 100px" />
   </div>
 </template>
 
 <script setup>
 import axios from "axios";
+import CovidComponent from "../components/CovidComponent.vue";
+import PlaneIcon from "../components/Icons/PlaneIcon.vue";
 import { ref, onMounted } from "vue";
 import SearchComponents from "../components/SearchComponents.vue";
-
+import HeaderComponent from "../components/Header.vue";
+import StarIcon from "../components/Icons/StarIcon.vue";
+import LinksFooter from "../components/LinksFooter.vue";
+import SearchIcon from "../components/Icons/SearchIcon.vue";
 const hotels = ref([]);
 const sortedHotels = ref([]); // Sorted hotels data
+const sortedHotelsMeta = ref([]); // Sorted hotels data
 const selectedSortOrder = ref("");
 const fetchHotelData = async () => {
   const options = {
@@ -282,18 +407,17 @@ const fetchHotelData = async () => {
     params: {
       dest_id: "-2092174",
       search_type: "CITY",
-      arrival_date: "2023-11-28",
-      departure_date: "2023-11-29",
+      arrival_date: "2023-12-03",
+      departure_date: "2023-12-05",
       adults: "1",
-      sort_by: "closest_beach_distance",
       children_age: "0,17",
       room_qty: "1",
       page_number: "1",
       languagecode: "en-us",
-      currency_code: "INR",
+      currency_code: "AED",
     },
     headers: {
-      "X-RapidAPI-Key": "3c64eee607mshd9a8b5692ab2a69p128742jsn05bb2d37a272",
+      "X-RapidAPI-Key": "8fe3512f62msh46ab6fcbcfebd8cp150f9fjsnd1ec453cb6db",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -302,6 +426,7 @@ const fetchHotelData = async () => {
     const response = await axios.request(options);
     // Update the ref with the fetched hotels
     hotels.value = response.data.data.hotels;
+    sortedHotelsMeta.value = response.data.data.meta;
   } catch (error) {
     console.error(error);
   }
@@ -312,14 +437,14 @@ const fetchHotelData = async () => {
     params: {
       dest_id: "-2092174",
       search_type: "CITY",
-      arrival_date: "2023-11-28",
-      departure_date: "2023-11-29",
+      arrival_date: "2023-12-03",
+      departure_date: "2023-12-05",
       adults: "1",
       children_age: "1,17",
       room_qty: "1",
     },
     headers: {
-      "X-RapidAPI-Key": "3c64eee607mshd9a8b5692ab2a69p128742jsn05bb2d37a272",
+      "X-RapidAPI-Key": "8fe3512f62msh46ab6fcbcfebd8cp150f9fjsnd1ec453cb6db",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -340,6 +465,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.all {
+  margin: 0px;
+  padding: 0px;
+}
 .stars button {
   border: solid 1px #efefef;
   padding: 8px;
@@ -388,7 +517,7 @@ onMounted(() => {
   box-shadow: -1px -1px 2px;
 }
 
-/* Checked state styles */
+
 input:checked + .slider {
   background-color: #2196f3;
 }
@@ -401,10 +530,9 @@ input:checked + .slider:before {
 
 .search-name-box {
   background: red;
-  width: 295px;
   height: 119px;
   border-radius: 6px;
-  background: var(--Gray-6, #f2f2f2);
+  background: #f2f2f2;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -412,26 +540,26 @@ input:checked + .slider:before {
 }
 .search-name-input {
   display: flex;
-  width: 259px;
   padding: 11px 12px 12px 12px;
   align-items: center;
   gap: 10px;
   border-radius: 4px;
-  border: 1px solid var(--Gray-5, #e0e0e0);
+  border: 1px solid #e0e0e0;
   background: #fff;
 }
 .main {
 }
 header {
+  position: relative;
   background: linear-gradient(180deg, #2969bf 0%, #144e9d 100%);
-  height: 200px;
-}
-nav {
+  height: 250px;
+  padding-inline: 100px;
+  padding-top: 0px;
 }
 .custom-header {
-  background-color: #ffffff; /* Example background color */
-  color: #000000; /* Example text color */
-  padding: 1rem 0rem; /* Example padding */
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem 0rem;
   display: flex;
   justify-content: space-between;
 }
@@ -439,14 +567,14 @@ nav {
 .left-section,
 .right-section {
   display: flex;
-  gap: 0.75rem; /* Example space between elements */
+  gap: 0.75rem;
 }
 
 .center-section {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  gap: 40px; /* Example space between elements */
+  gap: 40px;
   color: var(--Gray-1, #333);
   font-family: sans-serif;
   font-size: 16px;
@@ -468,9 +596,5 @@ nav {
   display: grid;
   grid-template-columns: 25% 75%;
   gap: 30px;
-}
-.select div:first-child {
-}
-.select div:nth-child(2) {
 }
 </style>

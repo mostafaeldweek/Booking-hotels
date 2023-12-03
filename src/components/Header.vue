@@ -1,30 +1,31 @@
 <template>
-  <header class="custom-header">
+  <header class="bg-white text-black py-4 flex justify-between items-center">
     <!-- Left Section (2 elements) -->
-    <div class="left-section">
+    <div class="flex items-center gap-3">
       <span>
         <PlaneIcon />
       </span>
-
-      <span>Left Element 2</span>
+      <span class="font-bold">my Dream Place</span>
     </div>
 
     <!-- Center Section (5 elements) -->
-    <div class="center-section">
-      <span>Home</span>
-      <span>Discover</span>
-      <span>activites</span>
-      <span>About</span>
-      <span>Contact</span>
+    <div
+      class="flex-grow flex justify-center items-center gap-10 text-gray-800 font-sans text-base font-medium"
+    >
+      <a class="no-underline text-black" href="#">Home</a>
+      <a class="no-underline text-black" href="#discover">Discover</a>
+      <a class="no-underline text-black" href="#activities">Activities</a>
+      <a class="no-underline text-black" href="#about">About</a>
+      <a class="no-underline text-black" href="#contact">Contact</a>
     </div>
 
     <!-- Right Section (2 elements) -->
-    <div class="right-section">
+    <div class="flex items-center gap-3">
       <router-link to="/registration">
         <button
-          class="w-full py-2 text-white border-none cursor-pointer rounded bg-blue-500 hover:bg-yellow-500"
+          class="border-1 border-blue-500 bg-blue-500 inline-flex px-4 py-2 rounded items-center gap-2 cursor-pointer"
         >
-          Login
+          Register
         </button>
       </router-link>
     </div>
@@ -36,35 +37,4 @@ import { RouterView } from "vue-router";
 import PlaneIcon from "./Icons/PlaneIcon.vue";
 </script>
 
-<style scoped>
-.custom-header {
-  background-color: #ffffff; /* Example background color */
-  color: #000000; /* Example text color */
-  padding: 1rem 0rem; /* Example padding */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.left-section,
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem; /* Example space between elements */
-}
-
-.center-section {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; /* Example space between elements */
-  color: var(--Gray-1, #333);
-  font-family: sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.32px;
-}
-</style>
+<style scoped></style>
